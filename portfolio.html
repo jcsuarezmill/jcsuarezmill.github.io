@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rod Salmeo | AI-Powered Virtual Assistant</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <script>
@@ -24,6 +27,10 @@
         .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+        
+        /* Chatbot Custom Sizing */
+        #chatbot-window { display: none; transition: all 0.3s ease-in-out; }
+        #chatbot-window.active { display: flex; }
     </style>
 </head>
 <body class="antialiased selection:bg-primary selection:text-white pb-20">
@@ -43,12 +50,13 @@
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full pointer-events-none"></div>
         <div class="fade-in max-w-3xl relative z-10">
+            <!-- Replace this URL with your actual headshot if you want! -->
             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rod" alt="Rod Salmeo" class="w-32 h-32 mx-auto rounded-full bg-slate-800 border-4 border-slate-700 mb-6 shadow-xl shadow-blue-500/20">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
                 Hi, I'm <span class="text-gradient">Rod Salmeo</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
-                A highly adaptable Virtual Assistant specializing in AI Integrations, Python (Streamlit) Web Apps, and Top-Tier Customer Support.
+                A highly adaptable Virtual Assistant specializing in AI Integrations, Python Web Apps, and Top-Tier Customer Support.
             </p>
             <div class="flex gap-4 justify-center">
                 <a href="#apps" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition transform hover:scale-105 shadow-lg shadow-blue-500/30">View My Live Apps</a>
@@ -92,7 +100,7 @@
                 <div>
                     <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">📄</div>
                     <h3 class="text-xl font-bold mb-2 text-white group-hover:text-primary transition">Harvard Resume AI</h3>
-                    <p class="text-gray-400 text-sm mb-6">A fully functional Streamlit web app that utilizes the Groq API to parse raw text and generate perfectly formatted, ATS-compliant Harvard-style PDF resumes.</p>
+                    <p class="text-gray-400 text-sm mb-6">A functional Streamlit web app that utilizes the Groq API to parse raw text and generate perfectly formatted Harvard-style PDF resumes.</p>
                 </div>
                 <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
                     <a href="https://harvard-resume-app.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
@@ -165,23 +173,56 @@
         </div>
     </section>
 
-    <!-- SECURE FLOATING AI CHATBOT LINK -->
+    <!-- SECURE EMBEDDED STREAMLIT CHATBOT -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        <div class="bg-slate-800 text-white text-xs px-3 py-1 rounded-full mb-2 shadow-lg border border-slate-600 animate-bounce">
+        
+        <!-- The Chat Window (Hidden by default) -->
+        <div id="chatbot-window" class="glass-card w-[350px] h-[500px] mb-4 rounded-2xl flex-col overflow-hidden shadow-2xl shadow-blue-500/20 border border-slate-600 transition-all duration-300">
+            
+            <!-- Chat Header -->
+            <div class="bg-slate-800 py-3 px-4 flex justify-between items-center border-b border-slate-700 w-full">
+                <span class="font-bold text-white"><i class="fa-solid fa-robot text-primary mr-2"></i>Rod's AI Assistant</span>
+                <button onclick="toggleChat()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- THE IFRAME: REPLACE URL HERE -->
+            <!-- Note: Keep the /?embed=true at the end of your link! -->
+            <iframe 
+                src="https://rod-ai-assistant.streamlit.app/?embed=true" 
+                width="100%" 
+                height="100%" 
+                frameborder="0"
+                class="bg-darker"
+                style="border: none;">
+            </iframe>
+        </div>
+        
+        <!-- The Floating Button -->
+        <div class="bg-slate-800 text-white text-xs px-3 py-1 rounded-full mb-2 shadow-lg border border-slate-600 animate-bounce cursor-pointer" onclick="toggleChat()">
             Chat with my AI! 👋
         </div>
-        <!-- TO DO: Update this link to your new Streamlit Chatbot URL once you deploy it! -->
-        <a href="https://your-chatbot-url.streamlit.app" target="_blank" class="bg-primary hover:bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center text-2xl transition transform hover:scale-110">
+        <button onclick="toggleChat()" class="bg-primary hover:bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center text-2xl transition transform hover:scale-110">
             <i class="fa-solid fa-robot"></i>
-        </a>
+        </button>
     </div>
 
+    <!-- Scripts -->
     <script>
         // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        // Toggle Chat Window Logic
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatbot-window');
+            if (chatWindow.classList.contains('active')) {
+                chatWindow.classList.remove('active');
+            } else {
+                chatWindow.classList.add('active');
+            }
+        }
     </script>
 </body>
 </html>
