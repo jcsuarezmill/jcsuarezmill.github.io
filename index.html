@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rod Salmeo | AI-Powered Virtual Assistant</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
     <script>
         tailwind.config = {
             theme: {
@@ -27,230 +23,100 @@
         .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        
-        /* Chatbot Custom Sizing */
         #chatbot-window { display: none; transition: all 0.3s ease-in-out; }
         #chatbot-window.active { display: flex; }
     </style>
 </head>
 <body class="antialiased selection:bg-primary selection:text-white pb-20">
 
-    <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 glass-card border-b-0 py-4 px-6 md:px-12 flex justify-between items-center">
         <a href="#" class="text-xl font-bold tracking-tighter">Rod<span class="text-primary">Salmeo</span></a>
         <div class="hidden md:flex gap-8 font-semibold text-sm text-gray-300">
             <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#apps" class="hover:text-white transition">My AI Apps</a>
-            <a href="#experience" class="hover:text-white transition">Experience</a>
-            <a href="#" class="hover:text-white transition"></a>
+            <a href="#apps" class="hover:text-white transition">AI Apps</a>
+            <a href="#strategy" class="hover:text-white transition">Strategy</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full pointer-events-none"></div>
         <div class="fade-in max-w-3xl relative z-10">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rod" alt="Rod Salmeo" class="w-32 h-32 mx-auto rounded-full bg-slate-800 border-4 border-slate-700 mb-6 shadow-xl shadow-blue-500/20">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
                 Hi, I'm <span class="text-gradient">Rod Salmeo</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">
-                A highly adaptable Virtual Assistant specializing in AI Integrations, Python Web Apps, and Top-Tier Customer Support.
+                Elite Virtual Assistant specializing in AI Automations, High-Volume Support, and Technical Operations.
             </p>
-            <div class="flex gap-4 justify-center">
-                <a href="#apps" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition transform hover:scale-105 shadow-lg shadow-blue-500/30">View My Live Apps</a>
-                <a href="https://github.com/jcsuarezmill" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-full font-semibold border border-slate-700 transition transform hover:scale-105">
-                    <i class="fa-brands fa-github mr-2"></i>GitHub
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#apps" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition transform hover:scale-105 shadow-lg shadow-blue-500/30">View AI Apps</a>
+                <a href="https://www.linkedin.com/in/rod-salmeo-886065182/" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-full font-semibold border border-slate-700 transition transform hover:scale-105">
+                    <i class="fa-brands fa-linkedin mr-2 text-blue-400"></i>LinkedIn
+                </a>
+                <a href="https://linktr.ee/RodVA" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-full font-semibold border border-slate-700 transition transform hover:scale-105">
+                    <i class="fa-solid fa-link mr-2 text-green-400"></i>Linktree
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center"><i class="fa-solid fa-user-astronaut mr-3 text-primary"></i>About Me</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
-            <div class="text-gray-300 leading-relaxed text-lg">
-                <p class="mb-4">I am an adaptable and highly communicative digital operations professional based in Mindanao, Philippines.</p>
-                <p class="mb-4">Beyond traditional Virtual Assistance and inbox management, I build and deploy custom <strong>AI-powered web applications</strong> using Python and Streamlit to automate workflows and enhance learning.</p>
-                <p>Fluent in C2 English and B1 Spanish, I leverage AI tools to solve problems, scale productivity, and deliver exceptional support for growing teams.</p>
+    <!-- NEW: STRATEGY & DISCIPLINE SECTION -->
+    <section id="strategy" class="py-20 px-6 max-w-6xl mx-auto border-t border-slate-800">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gradient"><i class="fa-solid fa-brain mr-3"></i>Strategy & Discipline</h2>
+        <div class="grid md:grid-cols-3 gap-8 fade-in">
+            <div class="glass-card p-8 rounded-2xl border-blue-500/20 hover:border-blue-500/50 transition">
+                <div class="text-4xl mb-4">♟️</div>
+                <h3 class="text-xl font-bold text-white mb-2">Grandmaster Logic</h3>
+                <p class="text-gray-400 text-sm">Rated <strong>2300+</strong> in Chess. I apply tactical pattern recognition and long-term strategy to every business workflow.</p>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <h3 class="text-xl font-semibold mb-4 text-white">Tech & Operations Stack</h3>
-                <div class="flex flex-wrap gap-3 text-sm font-medium">
-                    <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">Python & Streamlit</span>
-                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full border border-purple-500/30">Groq LLM API</span>
-                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full border border-green-500/30">Zendesk & CRM</span>
-                    <span class="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full border border-yellow-500/30">Lead Generation</span>
-                    <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full border border-cyan-500/30">Web3 Operations</span>
-                    <span class="bg-slate-500/20 text-slate-300 px-3 py-1 rounded-full border border-slate-500/30">English (C2) / Spanish (B1)</span>
-                </div>
+            <div class="glass-card p-8 rounded-2xl border-purple-500/20 hover:border-purple-500/50 transition">
+                <div class="text-4xl mb-4">💪</div>
+                <h3 class="text-xl font-bold text-white mb-2">Extreme Discipline</h3>
+                <p class="text-gray-400 text-sm">100 pushups in a row. Heavy physical training builds the mental resilience required for high-pressure technical roles.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- APPS PORTFOLIO SECTION -->
-    <section id="apps" class="py-20 px-6 max-w-6xl mx-auto bg-dark border-y border-slate-800">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><i class="fa-solid fa-laptop-code mr-3 text-primary"></i>Live AI & Web Applications</h2>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- App 1: Resume Builder -->
-            <div class="glass-card p-6 rounded-2xl hover:-translate-y-2 transition duration-300 group fade-in flex flex-col justify-between">
-                <div>
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">📄</div>
-                    <h3 class="text-xl font-bold mb-2 text-white group-hover:text-primary transition">Harvard Resume AI</h3>
-                    <p class="text-gray-400 text-sm mb-6">A functional Streamlit web app that utilizes the Groq API to parse raw text and generate perfectly formatted Harvard-style PDF resumes.</p>
-                </div>
-                <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
-                    <a href="https://rod-harvard-resume.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
-                    <a href="https://github.com/jcsuarezmill/harvard-resume-app" target="_blank" class="text-gray-300 hover:text-white py-1.5"><i class="fa-brands fa-github mr-1"></i> Code</a>
-                </div>
-            </div>
-
-            <!-- App 2: Spanish Tutor Web -->
-            <div class="glass-card p-6 rounded-2xl hover:-translate-y-2 transition duration-300 group fade-in flex flex-col justify-between">
-                <div>
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🇪🇸</div>
-                    <h3 class="text-xl font-bold mb-2 text-white group-hover:text-primary transition">Spanish Tutor Web</h3>
-                    <p class="text-gray-400 text-sm mb-6">An interactive web application designed to help users practice and learn Spanish using AI-driven conversations and language exercises.</p>
-                </div>
-                <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
-                    <a href="https://rod-spanish-tutor.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
-                    <a href="https://github.com/jcsuarezmill/spanish-tutor-web" target="_blank" class="text-gray-300 hover:text-white py-1.5"><i class="fa-brands fa-github mr-1"></i> Code</a>
-                </div>
-            </div>
-
-            <!-- App 3: English Reading -->
-            <div class="glass-card p-6 rounded-2xl hover:-translate-y-2 transition duration-300 group fade-in flex flex-col justify-between">
-                <div>
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">📚</div>
-                    <h3 class="text-xl font-bold mb-2 text-white group-hover:text-primary transition">English Reading App</h3>
-                    <p class="text-gray-400 text-sm mb-6">An educational Streamlit application focused on improving English reading comprehension and proficiency for non-native speakers.</p>
-                </div>
-                <div class="flex gap-4 text-sm font-semibold border-t border-slate-700 pt-4 mt-auto">
-                    <a href="https://rod-english-reading.streamlit.app" target="_blank" class="bg-primary text-white px-3 py-1.5 rounded-lg hover:bg-blue-600"><i class="fa-solid fa-play mr-1"></i> Live App</a>
-                    <a href="https://github.com/jcsuarezmill/englishreading" target="_blank" class="text-gray-300 hover:text-white py-1.5"><i class="fa-brands fa-github mr-1"></i> Code</a>
-                </div>
+            <div class="glass-card p-8 rounded-2xl border-pink-500/20 hover:border-pink-500/50 transition">
+                <div class="text-4xl mb-4">📚</div>
+                <h3 class="text-xl font-bold text-white mb-2">Applied Psychology</h3>
+                <p class="text-gray-400 text-sm">Studying <strong>Cialdini & Robert Greene</strong> to master human persuasion, negotiation, and high-stakes communication.</p>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="py-20 px-6 max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><i class="fa-solid fa-briefcase mr-3 text-primary"></i>Work Experience</h2>
-        <div class="space-y-8 pl-4 border-l-2 border-slate-700 fade-in">
-            <div class="relative pl-6">
-                <div class="absolute w-4 h-4 bg-primary rounded-full -left-[11px] top-1 border-4 border-darker"></div>
-                <h3 class="text-xl font-bold">Virtual Assistant Trainee</h3>
-                <p class="text-primary font-medium text-sm mb-2">The VA BAR | Jan 2026 - Present</p>
-                <p class="text-gray-400">Executing hands-on projects in lead generation, database organization, and email marketing workflows.</p>
-            </div>
-            <div class="relative pl-6">
-                <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-[11px] top-1 border-4 border-darker"></div>
-                <h3 class="text-xl font-bold">Multimedia & AI Specialist</h3>
-                <p class="text-blue-400 font-medium text-sm mb-2">Freelance | Dec 2021 - 2025</p>
-                <p class="text-gray-400">Supported creative operations for Web3 campaigns. Recruited and managed 15+ remote ambassadors and generated ~$8,000 USD via AI digital assets.</p>
-            </div>
-            <div class="relative pl-6">
-                <div class="absolute w-4 h-4 bg-purple-400 rounded-full -left-[11px] top-1 border-4 border-darker"></div>
-                <h3 class="text-xl font-bold">Tech Support / Customer Service</h3>
-                <p class="text-purple-400 font-medium text-sm mb-2">UniversalTech Inc. | Dec 2020 - May 2021</p>
-                <p class="text-gray-400">Provided high-volume tech support. Handled 200+ outbound calls per shift alongside inbound ticket resolutions via Zendesk. Ranked Top 3 Performer.</p>
-            </div>
+    <!-- SOCIAL MEDIA GRID FOOTER -->
+    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center border-t border-slate-800 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Digital Ecosystem</h2>
+        <div class="grid grid-cols-3 md:grid-cols-7 gap-4 mb-12">
+            <a href="https://www.linkedin.com/in/rod-salmeo-886065182/" target="_blank" class="glass-card p-4 rounded-xl hover:text-blue-500 transition"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+            <a href="https://x.com/rodsalmva" target="_blank" class="glass-card p-4 rounded-xl hover:text-white transition"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
+            <a href="https://www.tiktok.com/@rodsalmva" target="_blank" class="glass-card p-4 rounded-xl hover:text-pink-500 transition"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+            <a href="https://www.instagram.com/rodsalmva/" target="_blank" class="glass-card p-4 rounded-xl hover:text-orange-500 transition"><i class="fa-brands fa-instagram text-2xl"></i></a>
+            <a href="https://www.youtube.com/@rodsalmva" target="_blank" class="glass-card p-4 rounded-xl hover:text-red-500 transition"><i class="fa-brands fa-youtube text-2xl"></i></a>
+            <a href="https://web.facebook.com/rodva" target="_blank" class="glass-card p-4 rounded-xl hover:text-blue-600 transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+            <a href="https://linktr.ee/RodVA" target="_blank" class="glass-card p-4 rounded-xl hover:text-green-400 transition"><i class="fa-solid fa-tree text-2xl"></i></a>
         </div>
+        <a href="mailto:varodsalm@gmail.com" class="bg-primary hover:bg-blue-600 text-white px-10 py-4 rounded-full font-bold transition shadow-xl shadow-blue-500/20">Contact Rod</a>
     </section>
 
-    <!-- CONTACT & SOCIAL ECOSYSTEM -->
-<section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center border-t border-slate-800 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Connect</h2>
-    <p class="text-gray-400 mb-10">Find me across the web where I share AI tips, VA workflows, and professional insights.</p>
-    
-    <!-- Social Grid -->
-    <div class="grid grid-cols-3 md:grid-cols-7 gap-4 mb-12">
-        <a href="https://www.linkedin.com/in/rod-salmeo-886065182/" target="_blank" class="glass-card p-4 rounded-xl hover:text-blue-500 hover:border-blue-500/50 transition transform hover:-translate-y-1">
-            <i class="fa-brands fa-linkedin text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">LinkedIn</span>
-        </a>
-        <a href="https://x.com/rodsalmva" target="_blank" class="glass-card p-4 rounded-xl hover:text-white hover:border-white/50 transition transform hover:-translate-y-1">
-            <i class="fa-brands fa-x-twitter text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">X / Twitter</span>
-        </a>
-        <a href="https://www.tiktok.com/@rodsalmva" target="_blank" class="glass-card p-4 rounded-xl hover:text-pink-500 hover:border-pink-500/50 transition transform hover:-translate-y-1">
-            <i class="fa-brands fa-tiktok text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">TikTok</span>
-        </a>
-        <a href="https://www.instagram.com/rodsalmva/" target="_blank" class="glass-card p-4 rounded-xl hover:text-orange-500 hover:border-orange-500/50 transition transform hover:-translate-y-1">
-            <i class="fa-brands fa-instagram text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">Instagram</span>
-        </a>
-        <a href="https://www.youtube.com/@rodsalmva" target="_blank" class="glass-card p-4 rounded-xl hover:text-red-500 hover:border-red-500/50 transition transform hover:-translate-y-1">
-            <i class="fa-brands fa-youtube text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">YouTube</span>
-        </a>
-        <a href="https://web.facebook.com/rodva" target="_blank" class="glass-card p-4 rounded-xl hover:text-blue-600 hover:border-blue-600/50 transition transform hover:-translate-y-1">
-            <i class="fa-brands fa-facebook text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">Facebook</span>
-        </a>
-        <a href="https://linktr.ee/RodVA" target="_blank" class="glass-card p-4 rounded-xl hover:text-green-400 hover:border-green-400/50 transition transform hover:-translate-y-1">
-            <i class="fa-solid fa-tree text-2xl"></i>
-            <span class="block text-[10px] mt-2 uppercase font-bold tracking-widest">Linktree</span>
-        </a>
-    </div>
-
-    <a href="mailto:varodsalm@gmail.com" class="bg-primary hover:bg-blue-600 text-white px-10 py-4 rounded-full font-bold transition transform hover:scale-105 shadow-xl shadow-blue-500/20">
-        <i class="fa-solid fa-envelope mr-2"></i> Email Me Directly
-    </a>
-</section>
-
-    <!-- SECURE EMBEDDED STREAMLIT CHATBOT -->
+    <!-- FLOATING CHATBOT -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        
-        <!-- The Chat Window (Hidden by default) -->
-        <div id="chatbot-window" class="glass-card w-[350px] h-[500px] mb-4 rounded-2xl flex-col overflow-hidden shadow-2xl shadow-blue-500/20 border border-slate-600 transition-all duration-300">
-            
-            <!-- Chat Header -->
+        <div id="chatbot-window" class="glass-card w-[350px] h-[500px] mb-4 rounded-2xl flex-col overflow-hidden shadow-2xl border border-slate-600 transition-all">
             <div class="bg-slate-800 py-3 px-4 flex justify-between items-center border-b border-slate-700 w-full">
-                <span class="font-bold text-white"><i class="fa-solid fa-robot text-primary mr-2"></i>Rod's AI Assistant</span>
+                <span class="font-bold text-white"><i class="fa-solid fa-robot text-primary mr-2"></i>Rod's Assistant</span>
                 <button onclick="toggleChat()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            
-            <!-- IFRAME WITH CLEAN CUSTOM URL -->
-            <iframe 
-                src="https://rod-ai-assistant.streamlit.app/?embed=true&theme=dark" 
-                width="100%" 
-                height="100%" 
-                frameborder="0"
-                class="bg-darker"
-                style="border: none;">
-            </iframe>
+            <iframe src="https://rod-ai-assistant.streamlit.app/?embed=true&theme=dark" width="100%" height="100%" frameborder="0" class="bg-darker"></iframe>
         </div>
-        
-        <!-- The Floating Button -->
-        <div class="bg-slate-800 text-white text-xs px-3 py-1 rounded-full mb-2 shadow-lg border border-slate-600 animate-bounce cursor-pointer" onclick="toggleChat()">
-            Chat with my AI! 👋
-        </div>
-        <button onclick="toggleChat()" class="bg-primary hover:bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg shadow-blue-500/40 flex items-center justify-center text-2xl transition transform hover:scale-110">
+        <button onclick="toggleChat()" class="bg-primary hover:bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-2xl transition transform hover:scale-110">
             <i class="fa-solid fa-robot"></i>
         </button>
     </div>
 
-    <!-- Scripts -->
     <script>
-        // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-
-        // Toggle Chat Window Logic
-        function toggleChat() {
-            const chatWindow = document.getElementById('chatbot-window');
-            if (chatWindow.classList.contains('active')) {
-                chatWindow.classList.remove('active');
-            } else {
-                chatWindow.classList.add('active');
-            }
-        }
+        function toggleChat() { document.getElementById('chatbot-window').classList.toggle('active'); }
     </script>
 </body>
 </html>
